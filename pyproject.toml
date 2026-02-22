@@ -1,0 +1,39 @@
+# Tells packaging tools how to build your project.
+[build-system]
+# Build dependencies used when creating distributions/wheels.
+requires = ["setuptools", "wheel"]
+# Use setuptools as the build backend.
+build-backend = "setuptools.build_meta"
+
+# Project metadata used by pip/package indexes.
+[project]
+# The installable package name shown on package indexes.
+name = "django_btf"
+# Your app version (you can change this as you release updates).
+version = "0.1.0"
+# Short one-line summary.
+description = "A database-backed Django Task backend"
+# Points to your long-form package description file.
+readme = "README.md"
+# Runtime dependencies installed with your package.
+dependencies = [
+    "Django",
+]
+
+# Optional dependency groups (install with `.[group]`).
+[project.optional-dependencies]
+# Tools used while developing/testing this package.
+dev = [
+    "pytest",
+    "pytest-django",
+]
+
+# Use src/ layout so imports come from src/django_btf.
+[tool.setuptools]
+# Maps the package root to the src directory.
+package-dir = {"" = "src"}
+
+# Auto-discover Python packages under src/.
+[tool.setuptools.packages.find]
+# Search only inside src for packages.
+where = ["src"]
