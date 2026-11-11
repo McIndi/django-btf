@@ -1,3 +1,5 @@
+> Example / tutorial companion. Not maintained for production use. The two-tier store-and-forward design with a WebSocket broker, described in this project's GitHub description, is not implemented. This repository only has a simple database-backed backend.
+
 # django_btf
 
 A simple database-backed Django Task backend for Django 6.0+.
